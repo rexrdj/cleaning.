@@ -1,112 +1,227 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>الأركان كلين</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    body{
-      font-family: sans-serif;
-      margin:0;
-      padding:0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأركان كلين | أفضل شركة تنظيف بالطائف</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .glass-header { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .service-card { transition: all 0.3s ease; }
+        .service-card:hover { transform: translateY(-10px); }
+        .hero-overlay { background: linear-gradient(90deg, rgba(30, 58, 138, 0.85) 0%, rgba(30, 58, 138, 0.4) 100%); }
+        
+        @keyframes pulse-slow { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .animate-pulse-slow { animation: pulse-slow 3s infinite; }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-900">
 
-<body class="bg-slate-50">
+    <script>
+        const config = {
+            brandName: "الأركان كلين",
+            phone: "0543966102",
+            whatsapp: "966543966102",
+            location: "الطائف، المملكة العربية السعودية"
+        };
+    </script>
 
-<section class="relative h-screen flex items-center overflow-hidden">
+    <header id="navbar" class="fixed w-full z-[1000] transition-all duration-300 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 p-2 rounded-xl shadow-lg shadow-blue-200">
+                    <i data-lucide="sparkles" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="text-2xl font-black text-blue-900">الأركان كلين</span>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 font-bold text-slate-700">
+                <a href="#home" class="hover:text-blue-600 transition">الرئيسية</a>
+                <a href="#services" class="hover:text-blue-600 transition">خدماتنا</a>
+                <a href="#about" class="hover:text-blue-600 transition">من نحن</a>
+                <a href="tel:0543966102" class="bg-blue-600 text-white px-6 py-2.5 rounded-full hover:bg-blue-700 transition shadow-lg flex items-center gap-2">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                    0543966102
+                </a>
+            </nav>
 
-  <img
-    src="https://images.unsplash.com/photo-1581578731522-7b754775205e?auto=format&fit=crop&q=80&w=2070"
-    class="absolute inset-0 w-full h-full object-cover"
-  >
+            <button class="md:hidden text-blue-900" id="menu-toggle">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+    </header>
 
-  <div class="absolute inset-0 bg-black/60"></div>
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581578731522-7b754775205e?auto=format&fit=crop&q=80&w=2070" class="w-full h-full object-cover" alt="تنظيف منازل بالطائف">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
 
-  <div class="relative z-10 max-w-3xl mx-auto text-center text-white px-4">
+        <div class="container mx-auto px-4 relative z-10 text-white">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 bg-blue-500/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 mb-6">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-ping"></span>
+                    <span class="text-sm font-bold">متاحون الآن في كافة أحياء الطائف</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black mb-8 leading-tight">
+                    نظافة منزلك <br> تبدأ من <span class="text-blue-400 font-black">الأركان كلين</span>
+                </h1>
+                <p class="text-xl text-blue-50 mb-10 leading-relaxed max-w-xl font-medium">
+                    نقدم خدمات تنظيف الفلل، الشقق، الكنب، والسجاد بأحدث أجهزة البخار الألمانية وبأيدي عمالة مدربة بخبرة تزيد عن 10 سنوات.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/966543966102" class="bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-2xl text-xl font-black flex items-center justify-center gap-3 shadow-2xl transition-transform hover:scale-105">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
+                        احجز عبر واتساب
+                    </a>
+                    <a href="tel:0543966102" class="bg-white text-blue-900 px-10 py-5 rounded-2xl text-xl font-black flex items-center justify-center gap-3 shadow-xl transition-transform hover:scale-105">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                        اتصل بنا فوراً
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <h1 class="text-5xl md:text-7xl font-bold mb-6">
-      الأركان كلين
-    </h1>
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-blue-600 font-bold mb-2 tracking-widest uppercase">خدماتنا المميزة</h2>
+                <h3 class="text-4xl font-black text-slate-900">ماذا نقدم في الأركان كلين؟</h3>
+            </div>
 
-    <p class="text-xl mb-8">
-      أفضل شركة تنظيف بالطائف لتنظيف المنازل والفلل والكنب والسجاد بالبخار
-    </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-sm relative overflow-hidden group">
+                    <div class="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:rotate-12 transition-transform">
+                        <i data-lucide="home" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">تنظيف الفلل والقصور</h4>
+                    <p class="text-slate-600 leading-relaxed">تنظيف شامل للغرف، المجالس، المطابخ، والمسابح باستخدام أفضل مواد التعقيم العالمية.</p>
+                </div>
 
-    <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <!-- Service 2 -->
+                <div class="service-card p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-sm relative overflow-hidden group">
+                    <div class="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:rotate-12 transition-transform">
+                        <i data-lucide="wind" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">غسيل بالبخار</h4>
+                    <p class="text-slate-600 leading-relaxed">غسيل الكنب، السجاد، والستائر في مكانها بأحدث ماكينات البخار الساخن لإزالة أصعب البقع.</p>
+                </div>
 
-      <a href="tel:0543966102"
-         class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-2xl text-lg font-bold">
-         اتصل الآن
-      </a>
+                <!-- Service 3 -->
+                <div class="service-card p-8 bg-slate-50 rounded-[2.5rem] border border-slate-100 shadow-sm relative overflow-hidden group">
+                    <div class="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-white group-hover:rotate-12 transition-transform">
+                        <i data-lucide="droplets" class="w-8 h-8"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4">تنظيف الخزانات</h4>
+                    <p class="text-slate-600 leading-relaxed">تعقيم وغسيل خزانات المياه الأرضية والعلوية لضمان مياه نظيفة وصحية لعائلتك.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <a href="https://wa.me/966543966102"
-         class="bg-green-600 hover:bg-green-700 px-8 py-4 rounded-2xl text-lg font-bold">
-         واتساب
-      </a>
+    <section id="about" class="py-24 bg-blue-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
+            <div class="lg:w-1/2">
+                <h2 class="text-4xl font-black mb-8 leading-tight">لماذا نحن الخيار الأول <br> في مدينة الطائف؟</h2>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="bg-blue-600 p-3 rounded-xl h-fit"><i data-lucide="check" class="w-6 h-6"></i></div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-1">عمالة محترفة</h5>
+                            <p class="text-blue-100">فريق عمل مدرب على أعلى مستوى من الأمانة والإتقان.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-blue-600 p-3 rounded-xl h-fit"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-1">ضمان الجودة</h5>
+                            <p class="text-blue-100">نلتزم بإعادة العمل مجاناً في حال لم تنل الخدمة رضاك الكامل.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-blue-600 p-3 rounded-xl h-fit"><i data-lucide="clock" class="w-6 h-6"></i></div>
+                        <div>
+                            <h5 class="text-xl font-bold mb-1">دقة في المواعيد</h5>
+                            <p class="text-blue-100">نصلك في الموعد المحدد تماماً لنحترم جدولك اليومي.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white/5">
+                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80&w=1000" class="w-full h-[500px] object-cover" alt="شركة تنظيف">
+                    <div class="absolute bottom-8 right-8 bg-white p-6 rounded-3xl text-blue-900 shadow-2xl">
+                        <p class="text-4xl font-black mb-1">+1000</p>
+                        <p class="font-bold text-sm">عميل سعيد في الطائف</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <footer class="bg-slate-900 text-slate-400 py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-12 border-b border-slate-800">
+                <div class="text-center md:text-right">
+                    <div class="flex items-center gap-3 justify-center md:justify-start mb-4">
+                        <div class="bg-blue-600 p-2 rounded-xl">
+                            <i data-lucide="sparkles" class="text-white w-6 h-6"></i>
+                        </div>
+                        <span class="text-2xl font-black text-white">الأركان كلين</span>
+                    </div>
+                    <p class="max-w-sm">الشركة الرائدة في حلول النظافة المتكاملة والتعقيم في مدينة الطائف وضواحيها.</p>
+                </div>
+                
+                <div class="flex gap-4">
+                    <a href="tel:0543966102" class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center hover:bg-blue-600 transition group text-white">
+                        <i data-lucide="phone" class="w-6 h-6 group-hover:scale-110 transition"></i>
+                    </a>
+                    <a href="https://wa.me/966543966102" class="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center hover:bg-green-600 transition group text-white">
+                        <i data-lucide="message-circle" class="w-6 h-6 group-hover:scale-110 transition"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <p class="text-center pt-12 text-sm font-bold">
+                &copy; 2024 جميع الحقوق محفوظة لشركة الأركان كلين - الطائف
+            </p>
+        </div>
+    </footer>
 
-  </div>
+    <a href="https://wa.me/966543966102" class="fixed bottom-8 left-8 z-[2000] bg-green-500 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-all active:scale-95 group">
+        <i data-lucide="message-square" class="w-8 h-8"></i>
+        <span class="absolute right-full mr-4 bg-white text-slate-900 px-4 py-2 rounded-xl text-sm font-black whitespace-nowrap shadow-xl opacity-0 group-hover:opacity-100 transition-opacity hidden md:block">تواصل معنا الآن</span>
+    </a>
 
-</section>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
 
-<section class="py-20 px-4">
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-header', 'shadow-md', 'py-2');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.remove('glass-header', 'shadow-md', 'py-2');
+                navbar.classList.add('py-4');
+            }
+        });
 
-  <div class="max-w-6xl mx-auto">
-
-    <h2 class="text-4xl font-bold text-center mb-16">
-      خدماتنا
-    </h2>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      <div class="bg-white p-8 rounded-3xl shadow">
-        <h3 class="text-2xl font-bold mb-4">تنظيف المنازل</h3>
-        <p>تنظيف شامل وعميق للمنازل والفلل.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-3xl shadow">
-        <h3 class="text-2xl font-bold mb-4">تنظيف الكنب</h3>
-        <p>غسيل كنب بالبخار وإزالة البقع.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-3xl shadow">
-        <h3 class="text-2xl font-bold mb-4">تنظيف السجاد</h3>
-        <p>غسيل سجاد وموكيت بأحدث الأجهزة.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-3xl shadow">
-        <h3 class="text-2xl font-bold mb-4">مكافحة الحشرات</h3>
-        <p>رش مبيدات آمنة وفعالة.</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<footer class="bg-slate-900 text-white text-center py-10">
-
-  <h3 class="text-3xl font-bold mb-4">
-    الأركان كلين
-  </h3>
-
-  <p class="mb-6">
-    جميع خدمات التنظيف بالطائف
-  </p>
-
-  <a href="tel:0543966102"
-     class="bg-blue-600 px-6 py-3 rounded-xl inline-block">
-     0543966102
-  </a>
-
-</footer>
-
+        // Mobile Menu Toggle (Simple)
+        const btn = document.getElementById('menu-toggle');
+        btn.addEventListener('click', () => {
+            alert('قائمة الجوال ستفتح هنا عند رفع القالب على الموقع الفعلي');
+        });
+    </script>
 </body>
 </html>
